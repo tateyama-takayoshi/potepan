@@ -1,0 +1,1143 @@
+@charset 'utf-8';
+/* margin padding reset */
+body, div, p,  ul, ol, li, dl, dt, dd, table, th ,td, img, figure,
+h1, h2, h3 ,h4 ,h5, h6, form, select
+{ margin: 0; padding: 0; }
+
+html
+{ -webkit-text-size-adjust: 100%; }
+
+body
+{ -webkit-font-smoothing: antialiased; }
+
+/* remove list point mark */
+ul, ol
+{ list-style: none; }
+
+/* remove border & off descender */
+img
+{ border: 0; vertical-align: middle; }
+
+/* remove descender */
+svg, input, select, textarea, label
+{ vertical-align: middle; }
+
+/* set collapse */
+table
+{ border-collapse: collapse; }
+
+/* break word for all elements */
+*, *:before, *:after
+{w;word-break: break-all;webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+pre
+{ white-space: pre-wrap; }
+
+address
+{ font-style: normal; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+p { 
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+/*==============================
+ここまで　リセットcss↑
+ここから　共通css↓
+===============================*/
+/*Base style*/
+main {
+  display: block;
+}
+
+/*style*/
+html {
+  font-size: 14px;
+  font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+  color: #222222;
+}
+
+input, select, textarea {
+  color: #222222;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+}
+
+img {
+    width: 100%;
+}
+
+.contents-tidy{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-width {
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* ハンバーガーメニューチェックボックス */
+  #check {
+    display:none;
+  }
+/*===============================
+ここまで　共通 css↑
+ここから効果↓
+===============================*/
+/*hover*/
+.hover-opacity:hover {
+  transition: opacity 0.2s;
+  opacity: 0.7;
+}
+
+/*focus*/
+input:focus {
+  outline: 0;
+}
+
+/*br*/
+.pc-br {
+  display: block;
+}
+
+.sp-br {
+  display: inline;
+}
+
+/*before*/
+.desc-title::before {
+    content: '';
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 6px;
+    background-size: 100%;
+}
+
+.detail-course-content-price::before {
+  content: "\FFE5";
+}
+
+.detail-cassette-text::before {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 20px;
+    margin-right: 10px;
+    background: url("https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-finger.png") no-repeat;
+    background-size: 100%;
+}
+
+.detail-course-anchor > a::before {
+    content: "\203A";
+    transform: matrix(0, 1, -1, 0, 0, 0);
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.plan-cassettes-head::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-point.png);
+  background-size: 100%;
+}
+
+.list-content::before {
+    content: '';
+    display: inline-block;
+    min-width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #f79314;
+}
+
+.desc-title.detail::before {
+    width: 17px;
+    height: 17px;
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-pencil.png);
+}
+
+.desc-title.term::before {
+    width: 16px;
+    height: 18px;
+    margin-left: 2px;
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-calender.png);
+}
+
+.desc-title.condition::before {
+    width: 17px;
+    height: 14px;
+    margin-left: 2px;
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-condition.png);
+}
+
+.desc-title.fee::before {
+    width: 20px;
+    height: 20px;
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-coin.png);
+}
+
+/*after*/
+.bottom-line::after {
+    content: '';
+    display: block;
+    border-bottom: solid 6px #f79314;
+    width: 50px;
+    margin-top: 20px;
+  }
+  
+  .detail-course-content-price::after {
+    content: "\7A0E\5225";
+    font-size: 12px;
+    margin-left: 4px;
+}
+  /*button */
+.link-button {
+  background-color: #f79314;
+  color: #fff;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-top-button {
+  position: absolute;
+  top: -105px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 12px 30px -15px;
+  transition: 0.2s;
+}
+
+.page-top-button.contents-tidy {
+    align-items: center;
+    justify-content: center;
+}
+
+.page-top-arrow {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-left: solid 3px #f79214;
+    border-top: solid 3px #f79214;
+}
+
+.footer-info .footer-social-item > img {
+    width: 60px;
+    height: auto;
+}
+
+ .footer-social {
+    display: flex;
+    margin-top: 35px
+}
+
+.footer-social > li + li {
+    margin-left: 20px;
+}
+
+/* =============================
+site-header
+============================== */
+.site-header {
+    padding: 20px 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+.header-logo-sp {
+      display: none;
+  }
+  
+ .header-logo > .header-logo-pc {
+    width: auto;
+    height: 20px;
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.header-nav-list > li + li {
+    margin-left: 30px;
+}
+
+.header-nav-item {
+  display: block;
+}
+
+.header-nav-item > span{
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-nav .header-nav-item > span:last-child {
+    font-size: 10px;
+}
+
+.header-button {
+    width: 150px;
+}
+
+.link-button.menu {
+  display: flex;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  
+}
+
+.site-header-inner .header-nav-hamburger {
+  display: none;
+}
+
+/*===========================
+main-section
+===========================*/
+.main-section.course-detail {
+  background-color: #fcfaf5;
+}
+
+.section-underlayer-hero {
+  padding-top: 70px;
+  padding-bottom: 71px;
+  background-color: #f79314;
+  background-repeat: no-repeat;
+  background-size: 1440px;
+  background-position: center;
+}
+
+.underlayer-hero-heading {
+  font-size: 40px;
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.underlayer-hero-heading.course{
+  padding-left: 145px;
+}
+
+.section-underlayer-hero.course{
+  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/course-hero-pc.png);
+}
+
+.detail-course-block-box {
+    margin-top: 60px;
+    padding: 0px 40px 0px;
+    display: flex;
+    text-align: center;
+}
+
+.section-header.contents-tidy {
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-section {
+    padding-top: 75px;
+    padding-bottom: 80px;
+}
+
+.detail-text {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+.section-main-heading > span {
+  font-size:50px;
+}
+
+.detail-text-emphasis {
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.under-decoration {
+  background: linear-gradient(transparent 70%, #fff79d 70%, #fff79d);
+}
+/*全コースの共通ポイント*/
+.detail-point {
+    margin-top: 100px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.list-no {
+  width: 100px;
+  height: 100px;
+  margin: -90px auto 0 auto;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-no-image {
+    width: 40px;
+    margin-top: -8px;
+    border-radius: 50%;
+}
+
+.detail-point-title {
+    margin-top: -20px;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.detail-cassette-title {
+  padding: 4px;
+  border-radius: 15px;
+  color: #fff;
+  background: #222;
+}
+
+.detail-cassette {
+    width: 31%;
+    margin-top: 40px;
+}
+
+.detail-cassette-image {
+  margin-top: 16px;
+}
+
+.detail-cassette-text {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.detail-course-head {
+    background-color: #F79314;
+    font-family: NotoSansCJKjp-Bold, Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 18px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+}
+
+.detail-course-head > p {
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.detail-course-block {
+  border: 1px solid #7070701A;
+}
+
+.detail-course-block-box {
+  display: flex;
+  margin-top: 60px;
+  padding: 0 40px 0;
+}
+ 
+.detail-course-block.padding-right { 
+  margin-right: 25px;
+}
+
+.detail-course-content-price {
+    font-size: 28px;
+    font-family: Lato-Black;
+    font-weight: bold;
+    margin: 10px 0px 20px;
+}
+
+.detail-course-term {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.detail-course-term::first-letter {
+  font-size: 200%;
+}
+
+.detail-course-content span {
+    color: #F79214;
+    margin-left: 5px;
+}
+
+.detail-course-content:nth-child(odd) {
+    background-color: #fff8ea;
+}
+
+.detail-course-content:nth-child(even) {
+    background-color: #fffdfa;
+}
+
+.detail-course-content-body {
+    font-family: Noto Sans CJK JP;
+    font-size: 16px;
+    color: #22222299;
+    line-height: 2em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.detail-course-anchor > a {
+    color: #F79214;
+    font-weight: bold;
+}
+
+.detail-course-content {
+    padding: 18px;
+}
+/*コースプラン*/
+.section-header{
+  width: 100%;
+}
+
+.section-main-heading {
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.section-content {
+    margin-top: 60px;
+}
+
+.plan-box {
+    margin-top: 60px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #fcfaf5;
+}
+
+.plan-cassettes {
+  margin-top: 40px;
+  padding: 16px 20px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.plan-cassettes-head {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.plan-sub-head {
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+}
+
+.plan-head {
+  max-width: 476px;
+  margin: 0 auto;
+  font-size: 36px;
+  line-height: 1;
+  background: -webkit-linear-gradient(-40deg, #f79214, #f74e06);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.list-content {
+    justify-content: flex-start;
+    align-items: baseline;
+    padding-left: 8px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.plan-cassettes-tool {
+    width: 49%;
+    float: left;
+}
+
+.plan-cassettes-tool-box {
+    padding: 13px 8px 18px;
+}
+
+.plan-cassettes-tools {
+    display: flex;
+    margin-top: 28px;
+    display: flow-root;
+}
+
+.plan-cassettes-tool:nth-child(odd) {
+  margin-right: 2%;
+}
+
+.plan-cassettes-tool-label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.desc-title {
+  align-items: center;
+  width: 142px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 26px;
+  padding-left: 26px;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f79214;
+  background-color: #fcfaf5;
+}
+
+.desc-text {
+    margin-top: 20px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.plan-cassettes-skipping-left {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+  text-align: center ;
+  float: left;
+}
+
+.plan-cassettes-skipping-right >h4 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.plan-cassettes-skipping-right > p {
+    font-size: 16px;
+}
+
+.plan-cassettes-skipping-right > h4 > br {
+  display: none;
+}
+
+.plan-cassettes-skipping-right >p>span {
+  color: #F79214;
+}
+
+.plan-cassettes-tool-label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.plan-cassettes-tool-body {
+    font-size: 16px;
+}
+
+.section-header + .section-content {
+    margin-top: 60px;
+}
+
+.section-content .contents {
+  margin-top: 60px;
+}
+
+.main-section.pick-up-contents {
+    padding-top: 40px;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.pick-up-contents-list {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.pick-up-contents-list > .pick-up-contents-cassette {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: calc(100% / 3);
+}
+
+.pick-up-contents-media-thumbnail {
+    width: 100%;
+    height: 0;
+    padding-top: calc((190/320) * 100%);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pick-up-contents-media-thumbnail > img {
+    width: 100%;
+    height: 145%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.pick-up-contents-media-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.plan-head br {
+  display: none;
+}
+/*=========================-
+site-footer
+===========================*/
+.site-footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: #f79314;
+}
+
+.footer-info .footer-logo > img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-info {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    order: 1;
+}
+
+.footer-logo {
+    display: inline-block;
+    max-width: 280px;
+}
+
+.footer-company {
+  margin-top: 25px;
+}
+
+.footer-adoress {
+  margin-top: 10px;
+}
+
+.footer-nav {
+  order: 2;
+}
+
+.footer-nav-item:link, .footer-nav-item:visited {
+    color: #fff;
+}
+
+.footer-nav-item {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-nav > li + li {
+    margin-top: 30px;
+}
+
+.footer-nav-item > span {
+    font-weight: normal;
+    margin-left: 1em;
+}
+
+.footer-character {
+  order: 3;
+  align-self: flex-end;
+}
+
+.footer-character > img {
+    width: auto;
+    height: 70px;
+}
+
+.site-footer-sub {
+  margin-top: 60px;
+}
+
+.footer-copyright {
+    color: #fff;
+    font-size: 12px;
+}
+/* =============================
+media screen
+============================== */
+@media screen and (max-width: 1080px) {
+  main {
+    padding-top: 60px;
+  }
+
+.header-button {
+    margin: 0 auto;
+    width: 250px;
+  }
+
+.link-button.menu {
+    height: 60px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+
+  .site-header {
+    padding: 20px 0;
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .header-nav-list {
+    display: block;
+    position: fixed;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(300px);
+    transition: all 0.5s ease-in-out;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 75px;
+  }
+
+  .site-header-inner > *:last-child {
+    display: inline-flex;
+  }
+/* ハンバーガーメニュー*/
+  #check {
+    display:none;
+  }
+  
+  #check:checked ~ #sp-header-nav-list {
+    transform: translate3d(-100%, 0, 0);
+    transition: .3s ease-in-out;
+  }
+  
+/*ハンバーガーメニューアクション*/ 
+   #check:checked ~ .hamburger .header-nav-hamburger-line:first-of-type {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+    transition: top 0.2s, transform 0.3s, opacity 0.3s;
+   }
+
+   #check:checked ~ .hamburger .header-nav-hamburger-line:nth-of-type(2) {
+    transform: translate(20px, -50%);
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.3s;
+    }
+    
+    #check:checked ~ .hamburger .header-nav-hamburger-line:last-of-type {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+    transition: top 0.3s, transform 0.2s,;
+   }
+   
+/* ハンバーガーメニューのサイズ(横32x縦21) */
+ .hamburger {
+   width: 32px;
+   height: 21px;
+   position: relative;
+   cursor: pointer;
+   z-index: 100;
+ }
+
+  .header-nav-hamburger {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+/* ハンバーガーメニューライン */
+ .header-nav-hamburger-line {
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  display: block;
+  position: absolute;
+  background-color: #222;
+  }
+  
+  .header-nav-hamburger-line:first-child {
+    top: 0;
+  }
+ 
+ .header-nav-hamburger-line:last-child {
+    top: 100%; 
+  }
+/*navi menyu*/
+ .header-nav-item > span:first-child {
+   font-size: 16px;
+    letter-spacing: 5px;
+    color: #fff;
+  }
+  
+  .header-nav-item > span:last-child {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #f79314;
+    letter-spacing: 2px;
+  }
+  
+  .header-nav-item {
+    padding: 20px 0;
+  }
+
+}  
+
+@media screen and (max-width: 767px) {
+    /*共通*/
+  main {
+    padding-top: 52px;
+  }
+  
+  html {
+    font-size: 15px;
+  }
+
+  .pc-br {
+    display: inline;
+  }
+
+  .sp-br {
+    display: block;
+  }
+  
+  .content-width {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+    /*header*/  
+  .site-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}  
+  
+  .plan-head br {
+    display: block;
+  }
+  
+  .header-logo .header-logo-pc {
+      display: none;
+  }
+    
+  .header-logo .header-logo-sp {
+      display: block;
+      width: auto;
+      height: 16px;
+  }
+
+   /*main*/
+.section-main-heading {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  
+  .detail-text {
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .detail-text.detail-text-emphasis {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .list-no-image {
+    width: 32px;
+  }
+  
+  .detail-point .list-no {
+    width: 80px;
+    height: 80px;
+    margin-top: -70px;
+}
+  
+   .detail-box {
+    flex-direction: column;
+  }
+  
+  .detail-point-title {
+    font-size: 20px;
+  }
+  
+  .detail-point {
+    margin-top: 80px;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+  
+  .detail-cassette {
+    width: 100%;
+    margin-top: 36px;
+}
+  
+  .detail-cassette-title {
+    font-size: 15px;
+  }
+  
+  .detail-cassette-text {
+    font-size: 15px;
+  }
+  
+  .detail-course-block-box {
+    overflow-x: auto;
+    padding: initial;
+    display: block;
+  }
+  .detail-course-block:first-child {
+    margin-right: initial !important;
+    margin-bottom: 60px;
+  }
+  
+  .plan-cassettes-head {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .plan-head {
+    font-size: 24px;
+    line-height: 27px;
+}
+  
+  .plan-cassettes {
+    margin-top: 20px;
+  }
+  .list-content {
+    padding-left: 0;
+  }
+  .list-content, .desc-text, .flow-image-box figcaption {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  
+  .list-content + .list-content {
+    margin-top: 10px;
+  }
+  
+  .desc-title {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+  .desc-text {
+    padding-left: 0;
+    text-align: center;
+  }
+  .desc-text p + p {
+    margin-top: 10px;
+  }
+  
+  .plan-cassettes-tool {
+    float: initial;
+    width: initial !important;
+  }
+  
+  .plan-cassettes-skipping-left {
+    float: initial;
+    width: 65%;
+    height: initial;
+    max-width: 130px;
+    margin: 0px auto 20px;
+  }
+  
+  .plan-cassettes-skipping-right > h4 {
+    float: initial;
+    text-align: center;
+  }
+  
+  .plan-cassettes-skipping-right>h4>br {
+    display: block;
+  }
+
+  .main-section.pick-up-contents::before {
+    content: '';
+    width: 130px;
+    height: 126px;
+    position: absolute;
+    top: 40px;
+    left: 60%;
+    display: block;
+    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/bg-section-top-course.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  } 
+  
+      /*site footer*/
+  .site-footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  
+  .site-footer-main {
+    display: block;
+    text-align: center;
+  }
+  
+  .page-top-button {
+    right: 20px;
+    top: -85px;
+  }
+  
+  .site-footer-main .footer-nav {
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .footer-character {
+    margin-top: 50px;
+  }
+  
+  .footer-info {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+  }
+  
+  .footer-info .footer-social {
+    justify-content: center;
+  }
+  
+  .site-footer-sub {
+    margin-top: 60px;
+    text-align: center;
+  }
+}
+
