@@ -1099,7 +1099,21 @@ media screen
     background-size: contain;
     background-repeat: no-repeat;
   } 
+ .pick-up-contents-list {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
   
+  .pick-up-contents-list > .pick-up-contents-cassette {
+    width: 100%;
+  }
+  
+  .pick-up-contents-list > .pick-up-contents-cassette {
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: solid 1px #efefef;
+  }
       /*site footer*/
   .site-footer {
     padding-top: 60px;
